@@ -1,0 +1,20 @@
+{
+  "name": "kanbas-node-server-app",
+  "version": "1.0.0",
+  "description": "Node.js HTTP Web sever for the Kanbas application",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "Node",
+    "REST",
+    "Sever",
+    "HTTp",
+    "Web",
+    "Development",
+    "CS5610"
+  ],
+  "author": "Ank-22",
+  "license": "ISC"
+}
