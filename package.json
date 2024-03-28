@@ -16,5 +16,8 @@
     "CS5610"
   ],
   "author": "Ank-22",
-  "license": "ISC"
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.19.2"
+  }
 }
