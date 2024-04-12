@@ -18,11 +18,6 @@ function AssignmentRoutes(app) {
         db.assignments.push(newAssignment);
         res.send(newAssignment);
     });
-    app.delete("/api/assignments/:aid", (req, res) => {
-        const { aid } = req.params;
-        db.assignments = db.assignments.filter((a) => a._id !== aid);
-        res.sendStatus(200);
-    });
     app.put("/api/assignments/:aid", (req, res) => {
         const { aid } = req.params;
         const assignmentIndex = db.assignments.findIndex(
@@ -33,6 +28,12 @@ function AssignmentRoutes(app) {
         };
         res.sendStatus(204);
     });
+    app.delete("/api/assignments/:aid", (req, res) => {
+        const { aid } = req.params;
+        db.assignments = db.assignments.filter((a) => a._id !== aid);
+        res.sendStatus(200);
+    });
+   
 }
 
 export default AssignmentRoutes;
