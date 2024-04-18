@@ -6,13 +6,14 @@ import Lab5 from './Lab5.js';
 import cors from "cors";
 import AssignmentRoutes from './Kanbas/Assignment/routes.js';
 import mongoose from "mongoose";
-import UserRoutes from './Users/routes.js';
+import UserRoutes from './Kanbas/Users/routes.js';
 import session from "express-session";
 import "dotenv/config";
 
+console.log(process.env.DB_CONNECTION_STRING)
+const CONNECTION_STRING = process.env.DB_CONNECTION_STRING ||'mongodb://127.0.0.1:27017/kanbas'
 
-
-mongoose.connect("mongodb://127.0.0.1:27017/kanbas");
+mongoose.connect(CONNECTION_STRING);
 const app = express();
 app.use(cors({
   credentials: true,
